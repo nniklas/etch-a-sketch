@@ -7,12 +7,14 @@ const container = document.querySelector("#container")
 function createDiv(){
     const div = document.createElement("div")
     return div
-}
+};
 
 // a function that appends an element to another
 // use this to append child divs in the grid to the container
 // inputs child and parent elements
-function appendChildElement()
+function appendChildElement(child,parent){
+    parent.appendChildElement(child)
+};
 
 
 
