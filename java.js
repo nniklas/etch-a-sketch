@@ -1,13 +1,20 @@
 const container = document.querySelector("#container")
-const div = document.createElement("div")
+
 
 // define needed functions 
-// a function that creates a div
 
+// a function that creates a div
+function createDiv(){
+    const div = document.createElement("div")
+    return div
+}
 
 // a function that appends an element to another
 // use this to append child divs in the grid to the container
 // inputs child and parent elements
+function appendChildElement()
+
+
 
 // a function (attachAttribute) that creates attributes to elements
 
