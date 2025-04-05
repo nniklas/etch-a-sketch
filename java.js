@@ -19,7 +19,9 @@ function appendChildElement(child,parent){
 
 
 // a function (attachAttribute) that creates attributes to elements
-
+function attachAttribute(element, attribute){
+    element.setAttribute(attribute);
+};
 
 // a function that creates a button
 
