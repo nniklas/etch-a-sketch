@@ -47,7 +47,7 @@ let maxGridsize = 100;
 let gridSize = 0;
 
 // only use this variable temporarily to check code without user inputs
-let tempUserInput = 5;
+let tempUserInput = 100;
 
 //Logic
 
@@ -62,7 +62,7 @@ for (let i=0; i < tempUserInput; i++){
     // create row container elememts using createEL function
     let divContainer = createEl("div");
     appendChildElement(divContainer,container);
-    attachAttribute(divContainer, "class","mainContainer");
+    attachAttribute(divContainer, "class","secondContainer");
     // divContainer.textContent = `${i+1}`;
 
     // loop through for each row to create grid elements
@@ -70,6 +70,7 @@ for (let i=0; i < tempUserInput; i++){
         let div = createEl("div");
         div.textContent = `${i+1}`;
         appendChildElement(div,divContainer);
+        attachAttribute(div, "class","square");
     };
 };
 

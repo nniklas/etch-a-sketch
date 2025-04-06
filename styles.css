@@ -1,24 +1,32 @@
 /* styles for row container div */
-.mainContaine{
+.mainContainer{
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
     margin: 50px;
+    max-width: 960px;
+    max-height: 960px;
 }
 
 /* styles for container div */
-.mainContainer{
+.secondContainer{
     display: flex;
-    gap: 40px;
-    margin: 50px;
+    flex: auto;
+    gap: 5px;
+    max-width: 960px;
 }
 
 
 /* styles for grid squares*/
-
+.square{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-color: yellow;
+    flex: auto;
+}
 
 /* hover style */
 
 /* button style */
-.cont{
-    display: flex;
-}
