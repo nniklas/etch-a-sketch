@@ -46,6 +46,9 @@ function checkInput(input){
 //Logic
 
 // define maxgridsize
+let maxgridsize = 100;
+
+// create needed elememts using createEL function
 
 // use attacheAttribute to make divs in grid attain classes from stylesheet
 
