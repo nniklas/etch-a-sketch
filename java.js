@@ -43,7 +43,8 @@ function checkInput(input){
 const container = document.querySelector("#container")
 
 // define maxgridsize
-let maxgridsize = 100;
+let maxGridsize = 100;
+let gridSize = 0;
 
 // only use this variable temporarily to check code without user inputs
 let tempUserInput = 5;
@@ -51,14 +52,16 @@ let tempUserInput = 5;
 //Logic
 
 // check which grid size to use, not greater than maxgridsize
-if (tempUserInput > maxgridsize){
-    tempUserInput = maxgridsize;
+if (tempUserInput > maxGridsize){
+    tempUserInput = maxGridsize;
 } 
 
 // create needed elememts using createEL function
-for (let i=0; i < tempUserInput; i++){
+// square input loop for square formation
+gridSize = tempUserInput**2;
+for (let i=0; i < gridSize; i++){
     let div = createEl("div");
-    div.textContent = `I am div ${i}`;
+    div.textContent = `I am div ${i+1}`;
     appendChildElement(div,container);
 };
 
