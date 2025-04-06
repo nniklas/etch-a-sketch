@@ -48,7 +48,11 @@ function checkInput(input){
 // define maxgridsize
 let maxgridsize = 100;
 
+// only use this variable temporarily to check code without user inputs
+let tempUserInput = 5;
+
 // create needed elememts using createEL function
+
 
 // use attacheAttribute to make divs in grid attain classes from stylesheet
 
