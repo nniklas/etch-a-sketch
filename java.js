@@ -23,9 +23,12 @@ function attachAttribute(element, attribute){
     element.setAttribute(attribute);
 };
 
-// a function that creates a button
 
 // a function that asks for user input
+function askUser(){
+    let userInput = prompt("How many squares do you want on your grid?");
+    return userInput
+};
 
 // a function that checks user input and only return numeric values
 // return number that was entered or false if invalid input
