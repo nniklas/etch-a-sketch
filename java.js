@@ -30,8 +30,17 @@ function askUser(){
     return userInput
 };
 
-// a function that checks user input and only return numeric values
-// return number that was entered or false if invalid input
+// a function that checks user input and only return numeric values 
+// need to be greater than 0 as well
+function checkInput(input){
+    if (isNaN(input)){
+        return false;
+    } else if(isNaN(input) <= 0){
+        return false
+    } else {
+        return true
+    }
+};
 
 
 //Logic
