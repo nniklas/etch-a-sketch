@@ -1,6 +1,14 @@
 /* styles for container div */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+};
 
 /* styles for grid squares*/
+.gridSquare {
+    border-color: gray;
+};
 
 /* hover style */
 
