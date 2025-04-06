@@ -3,10 +3,10 @@ const container = document.querySelector("#container")
 
 // define needed functions 
 
-// a function that creates a div
-function createDiv(){
-    const div = document.createElement("div")
-    return div
+// a function that creates an HTML element
+function createEl(element){
+    const element = document.createElement(element)
+    return element
 };
 
 // a function that appends an element to another
