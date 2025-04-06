@@ -1,26 +1,17 @@
 /* styles for container div */
-.container{
+.mainContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: none;
     gap: 40px;
     margin: 50px;
 };
 
 /* styles for row container div */
-.columnContainer{
+.poo{
     display: flex;
-    flex: none;
-    gap: 10px;
 };
 
 /* styles for grid squares*/
-.gridSquare {
-    flex-grow: auto;
-    border-color: gray;
-    /* border: 5px; */
-};
+
 
 /* hover style */
 
