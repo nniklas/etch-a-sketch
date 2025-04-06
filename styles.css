@@ -3,13 +3,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex: none;
+    gap: 40px;
     margin: 50px;
 };
 
 /* styles for row container div */
-.rowContainer{
+.columnContainer{
     display: flex;
+    flex: none;
     gap: 10px;
 };
 
