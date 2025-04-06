@@ -16,8 +16,8 @@ function appendChildElement(child,parent){
 
 
 // a function (attachAttribute) that creates attributes to elements
-function attachAttribute(element, attribute){
-    element.setAttribute(attribute);
+function attachAttribute(element,type,attribute){
+    element.setAttribute(type, attribute);
 };
 
 
@@ -56,16 +56,24 @@ if (tempUserInput > maxGridsize){
     tempUserInput = maxGridsize;
 } 
 
-// create needed elememts using createEL function
 // square input loop for square formation
-gridSize = tempUserInput**2;
-for (let i=0; i < gridSize; i++){
-    let div = createEl("div");
-    div.textContent = `I am div ${i+1}`;
-    appendChildElement(div,container);
+//gridSize = tempUserInput**2;
+for (let i=0; i < tempUserInput; i++){
+    // create row container elememts using createEL function
+    let divContainer = createEl("div");
+    appendChildElement(divContainer,container);
+    attachAttribute(divContainer, "class",".rowContainer");
+
+    // loop through for each row to create grid elements
+    for (j=0; j< tempUserInput; j++){
+        let div = createEl("div");
+        div.textContent = `I am square ${i+1}`;
+        appendChildElement(div,divContainer);
+        attachAttribute(div, "class",".gridSquare");
+    };
 };
 
-// use attacheAttribute to make divs in grid attain classes from stylesheet
+
 
 // use attacheAttribute to make button attain desired attributes
 
