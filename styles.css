@@ -1,14 +1,17 @@
+/* styles for row container div */
+.mainContaine{
+    display: flex;
+    gap: 40px;
+    margin: 50px;
+}
+
 /* styles for container div */
 .mainContainer{
     display: flex;
     gap: 40px;
     margin: 50px;
-};
+}
 
-/* styles for row container div */
-.poo{
-    display: flex;
-};
 
 /* styles for grid squares*/
 
@@ -16,3 +19,6 @@
 /* hover style */
 
 /* button style */
+.cont{
+    display: flex;
+}
