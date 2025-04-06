@@ -1,11 +1,8 @@
-const container = document.querySelector("#container")
-
-
 // define needed functions 
 
 // a function that creates an HTML element
-function createEl(element){
-    const element = document.createElement(element)
+function createEl(elType){
+    const element = document.createElement(elType)
     return element
 };
 
@@ -13,7 +10,7 @@ function createEl(element){
 // use this to append child divs in the grid to the container
 // inputs child and parent elements
 function appendChildElement(child,parent){
-    parent.appendChildElement(child)
+    parent.appendChild(child)
 };
 
 
@@ -42,8 +39,8 @@ function checkInput(input){
     }
 };
 
-
-//Logic
+// define variables
+const container = document.querySelector("#container")
 
 // define maxgridsize
 let maxgridsize = 100;
@@ -51,12 +48,19 @@ let maxgridsize = 100;
 // only use this variable temporarily to check code without user inputs
 let tempUserInput = 5;
 
+//Logic
+
 // check which grid size to use, not greater than maxgridsize
 if (tempUserInput > maxgridsize){
     tempUserInput = maxgridsize;
 } 
 
 // create needed elememts using createEL function
+for (let i=0; i < tempUserInput; i++){
+    let div = createEl("div");
+    div.textContent = `I am div ${i}`;
+    appendChildElement(div,container);
+};
 
 // use attacheAttribute to make divs in grid attain classes from stylesheet
 
