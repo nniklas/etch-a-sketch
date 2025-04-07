@@ -29,7 +29,7 @@
 
 /* styles for grid squares*/
 .square{
-    background-color: green;
+    background-color: rgb(9, 195, 201);
     flex: 1 1;
     min-width: 0px;
     min-height: 0px;
