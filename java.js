@@ -68,7 +68,7 @@ for (let i=0; i < tempUserInput; i++){
     // loop through for each row to create grid elements
     for (j=0; j< tempUserInput; j++){
         let div = createEl("div");
-        div.textContent = `${i+1}`;
+        // div.textContent = `${i+1}`;
         appendChildElement(div,divContainer);
         attachAttribute(div, "class","square");
     };

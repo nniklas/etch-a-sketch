@@ -3,28 +3,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 2px;
     margin: 50px;
     max-width: 960px;
     max-height: 960px;
+    width: 960px;
+    height: 960px ;
+
 }
 
 /* styles for container div */
 .secondContainer{
     display: flex;
-    flex: auto;
-    gap: 5px;
-    max-width: 960pxg;
+    flex: 1 1;
+    flex-basis: 960px;
+    gap: 2px;
+    max-width: 960px;
+    min-width: 0px;
+    min-height: 0px;
+    width: 960px;
+    align-items: stretch;
 }
 
 
 /* styles for grid squares*/
 .square{
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    border-color: yellow;
-    flex: auto;
+    background-color: green;
+    flex: 1 1;
+    min-width: 0px;
+    min-height: 0px;
+    flex-basis: auto;
 }
 
 /* hover style */
