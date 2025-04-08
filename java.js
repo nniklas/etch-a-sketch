@@ -72,7 +72,32 @@ for (let i=0; i < tempUserInput; i++){
     };
 };
 
+// Listen for Hover effect
+const squares = document.querySelectorAll(".square");
 
+// we use the .forEach method to iterate through each button
+squares.forEach((square) => {
+  // define hover variables
+    let mouseEnter = false;
+  
+    // and for each one we add a listener
+    square.addEventListener("mouseover", () => {
+        mouseEnter = true;
+        // square.style.background = "black";
+  });
+    square.addEventListener("mouseout", () => {
+        if (mouseEnter == true){
+            square.style.background = "black"
+            mouseEnter = false;
+        };
+    // square.style.background = "black";
+});
+});
+
+
+// randomize bg color
+
+// change BG Color for squares that where hovered
 
 // use attacheAttribute to make button attain desired attributes
 
