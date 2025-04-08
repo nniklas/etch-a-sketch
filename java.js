@@ -47,25 +47,36 @@ let maxGridsize = 100;
 let gridSize = 0;
 
 // only use this variable temporarily to check code without user inputs
-let tempUserInput = 16;
+//let tempUserInput = 16;
+let userInput = 16;
+// add button to adjust grid numbers
+const button = createEl("button");
+button.addEventListener("click", () => {
+    userInput = +prompt("how many squares do you want your grid to be?")
+    console.log(userInput);
+});
+
+// append button on top of container
+button.textContent = "Press me to adjust grid size";
+appendChildElement(button,container);
 
 //Logic
 
 // check which grid size to use, not greater than maxgridsize
-if (tempUserInput > maxGridsize){
-    tempUserInput = maxGridsize;
+if (userInput > maxGridsize){
+    userInput = maxGridsize;
 } 
 
 // square input loop for square formation
 //gridSize = tempUserInput**2;
-for (let i=0; i < tempUserInput; i++){
+for (let i=0; i < userInput; i++){
     // create row container elememts using createEL function
     let divContainer = createEl("div");
     appendChildElement(divContainer,container);
     attachAttribute(divContainer, "class","secondContainer");
 
     // loop through for each row to create grid elements
-    for (j=0; j< tempUserInput; j++){
+    for (j=0; j< userInput; j++){
         let div = createEl("div");
         appendChildElement(div,divContainer);
         attachAttribute(div, "class","square");
