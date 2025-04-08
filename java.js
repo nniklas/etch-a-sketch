@@ -82,14 +82,14 @@ squares.forEach((square) => {
   
     // and for each one we add a listener
     square.addEventListener("mouseover", () => {
-        mouseEnter = true;
-        // square.style.background = "black";
+        // mouseEnter = true;
+        square.style.background = "black";
   });
     square.addEventListener("mouseout", () => {
-        if (mouseEnter == true){
-            square.style.background = "black"
-            mouseEnter = false;
-        };
+        // if (mouseEnter == true){
+            // square.style.background = "rgb(9, 195, 201)";
+        //     mouseEnter = false;
+        // };
     // square.style.background = "black";
 });
 });
