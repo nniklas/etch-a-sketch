@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     gap: 2px;
-    margin: 50px;
+    margin: auto;
+    margin-top: 50px;
     max-width: 960px;
     max-height: 960px;
     width: 960px;

@@ -47,7 +47,7 @@ let maxGridsize = 100;
 let gridSize = 0;
 
 // only use this variable temporarily to check code without user inputs
-let tempUserInput = 100;
+let tempUserInput = 16;
 
 //Logic
 
