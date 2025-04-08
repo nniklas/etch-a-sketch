@@ -54,7 +54,7 @@ let userInput = 4;
 const button = createEl("button");
 button.style.fontSize = "16px";
 button.style.backgroundColor = "whitesmoke";
-button.style.padding = "16px";
+button.style.paddingg = "16px";
 button.addEventListener("click", () => {
     userInput = +prompt("how many squares do you want your grid to be?")
     console.log(userInput);
@@ -95,21 +95,21 @@ function createGrid(userInput){
     const squares = document.querySelectorAll(".square");
     // we use the .forEach method to iterate through each button
     squares.forEach((square) => {
-        // define hover variables
-        let mouseEnter = false;
-        
+    
         // and for each one we add a listener
         square.addEventListener("mouseover", () => {
-            // mouseEnter = true;
-            square.style.background = "black";
+            const r = Math.floor(Math.random()*256);
+            const g = Math.floor(Math.random()*256);
+            const b = Math.floor(Math.random()*256);
+            square.style.backgroundColor = `rgb(${r},${g},${b})`;
         });
-        square.addEventListener("mouseout", () => {
-            // if (mouseEnter == true){
-                // square.style.background = "rgb(9, 195, 201)";
-            //     mouseEnter = false;
-            // };
-        // square.style.background = "black";
-    });
+    //     square.addEventListener("mouseout", () => {
+    //         // if (mouseEnter == true){
+    //             // square.style.background = "rgb(9, 195, 201)";
+    //         //     mouseEnter = false;
+    //         // };
+    //     // square.style.background = "black";
+    // });
     });
 };
 
