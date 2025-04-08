@@ -48,17 +48,21 @@ let gridSize = 0;
 
 // only use this variable temporarily to check code without user inputs
 //let tempUserInput = 16;
-let userInput = 16;
+let userInput = 4;
+
 // add button to adjust grid numbers
 const button = createEl("button");
 button.addEventListener("click", () => {
     userInput = +prompt("how many squares do you want your grid to be?")
     console.log(userInput);
+    clearGrid();
+    createGrid(userInput);
 });
 
-// append button on top of container
+// append button on top of body
 button.textContent = "Press me to adjust grid size";
-appendChildElement(button,container);
+const body = document.querySelector("body")
+body.insertBefore(button,body.firstChild);
 
 //Logic
 
@@ -69,42 +73,60 @@ if (userInput > maxGridsize){
 
 // square input loop for square formation
 //gridSize = tempUserInput**2;
-for (let i=0; i < userInput; i++){
-    // create row container elememts using createEL function
-    let divContainer = createEl("div");
-    appendChildElement(divContainer,container);
-    attachAttribute(divContainer, "class","secondContainer");
 
-    // loop through for each row to create grid elements
-    for (j=0; j< userInput; j++){
-        let div = createEl("div");
-        appendChildElement(div,divContainer);
-        attachAttribute(div, "class","square");
+function createGrid(userInput){
+    for (let i=0; i < userInput; i++){
+        // create row container elememts using createEL function
+        let divContainer = createEl("div");
+        appendChildElement(divContainer,container);
+        attachAttribute(divContainer, "class","secondContainer");
+    
+        // loop through for each row to create grid elements
+        for (j=0; j< userInput; j++){
+            let div = createEl("div");
+            appendChildElement(div,divContainer);
+            attachAttribute(div, "class","square");
+        };
     };
+    // Listen for Hover effect
+    const squares = document.querySelectorAll(".square");
+    // we use the .forEach method to iterate through each button
+    squares.forEach((square) => {
+        // define hover variables
+        let mouseEnter = false;
+        
+        // and for each one we add a listener
+        square.addEventListener("mouseover", () => {
+            // mouseEnter = true;
+            square.style.background = "black";
+        });
+        square.addEventListener("mouseout", () => {
+            // if (mouseEnter == true){
+                // square.style.background = "rgb(9, 195, 201)";
+            //     mouseEnter = false;
+            // };
+        // square.style.background = "black";
+    });
+    });
 };
 
-// Listen for Hover effect
-const squares = document.querySelectorAll(".square");
+function clearGrid(){
+    console.log(container);
+    console.log(container[0]);
+    container.innerHTML = "";
+    // for (let i = 0; i < container.attributes.length; i++){
+    //     console.log(container.attributes[i].name);
+    //     container.removeAttribute(container.attributes[i].name);
+    //     console.log(c(container.attributes[i].name));
+    // };
+};
 
-// we use the .forEach method to iterate through each button
-squares.forEach((square) => {
-  // define hover variables
-    let mouseEnter = false;
-  
-    // and for each one we add a listener
-    square.addEventListener("mouseover", () => {
-        // mouseEnter = true;
-        square.style.background = "black";
-  });
-    square.addEventListener("mouseout", () => {
-        // if (mouseEnter == true){
-            // square.style.background = "rgb(9, 195, 201)";
-        //     mouseEnter = false;
-        // };
-    // square.style.background = "black";
-});
-});
 
+
+
+
+//beginning with this size of grid
+createGrid(4);
 
 // randomize bg color
 
