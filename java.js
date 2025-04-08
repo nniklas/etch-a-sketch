@@ -102,46 +102,19 @@ function createGrid(userInput){
             const g = Math.floor(Math.random()*256);
             const b = Math.floor(Math.random()*256);
             square.style.backgroundColor = `rgb(${r},${g},${b})`;
+            let op = square.style.opacity;
+            if (+op < 1){
+                square.style.opacity = (+op+0.1);
+            };
+            
         });
-    //     square.addEventListener("mouseout", () => {
-    //         // if (mouseEnter == true){
-    //             // square.style.background = "rgb(9, 195, 201)";
-    //         //     mouseEnter = false;
-    //         // };
-    //     // square.style.background = "black";
-    // });
     });
 };
 
 function clearGrid(){
-    console.log(container);
-    console.log(container[0]);
     container.innerHTML = "";
-    // for (let i = 0; i < container.attributes.length; i++){
-    //     console.log(container.attributes[i].name);
-    //     container.removeAttribute(container.attributes[i].name);
-    //     console.log(c(container.attributes[i].name));
-    // };
 };
-
-
-
-
 
 //beginning with this size of grid
 createGrid(4);
-
-// randomize bg color
-
-// change BG Color for squares that where hovered
-
-// use attacheAttribute to make button attain desired attributes
-
-// ask for user input on new grid size
-
-// if invalid input ask again
-
-// if valid remove current grid (if any)
-
-// create new grid 
 
