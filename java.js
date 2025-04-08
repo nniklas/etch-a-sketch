@@ -59,6 +59,10 @@ button.addEventListener("click", () => {
     userInput = +prompt("how many squares do you want your grid to be?")
     console.log(userInput);
     clearGrid();
+    // check which grid size to use, not greater than maxgridsize
+    if (userInput > maxGridsize){
+        userInput = maxGridsize;
+    } 
     createGrid(userInput);
 });
 
@@ -69,10 +73,7 @@ body.insertBefore(button,body.firstChild);
 
 //Logic
 
-// check which grid size to use, not greater than maxgridsize
-if (userInput > maxGridsize){
-    userInput = maxGridsize;
-} 
+
 
 // square input loop for square formation
 //gridSize = tempUserInput**2;
