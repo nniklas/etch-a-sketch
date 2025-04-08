@@ -52,6 +52,9 @@ let userInput = 4;
 
 // add button to adjust grid numbers
 const button = createEl("button");
+button.style.fontSize = "16px";
+button.style.backgroundColor = "whitesmoke";
+button.style.padding = "16px";
 button.addEventListener("click", () => {
     userInput = +prompt("how many squares do you want your grid to be?")
     console.log(userInput);
